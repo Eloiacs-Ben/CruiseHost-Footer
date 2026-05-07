@@ -97,3 +97,45 @@
 
 </div>
 
+
+
+<script>
+// Create WhatsApp floating button
+const whatsappBtn = document.createElement("a");
+
+whatsappBtn.href = "https://wa.me/1234567890"; // Replace with your number
+whatsappBtn.target = "_blank";
+
+whatsappBtn.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" fill="white">
+  <path d="M16.001 3C8.82 3 3 8.82 3 16c0 2.54.73 4.91 1.99 6.92L3 29l6.28-1.95A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.6c-2.06 0-4.07-.55-5.82-1.59l-.42-.25-3.73 1.16 1.22-3.63-.27-.44A10.55 10.55 0 1 1 16 26.6zm5.78-7.9c-.32-.16-1.9-.94-2.2-1.05-.29-.11-.5-.16-.71.16-.21.32-.82 1.05-1.01 1.26-.19.21-.37.24-.69.08-.32-.16-1.34-.49-2.56-1.56-.95-.85-1.59-1.9-1.77-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.98-2.34-.26-.62-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.15 3.08 1.31 3.29.16.21 2.26 3.45 5.48 4.84.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37z"/>
+</svg>
+`;
+
+// Style
+whatsappBtn.style.position = "fixed";
+whatsappBtn.style.bottom = "20px";
+whatsappBtn.style.left = "20px";
+whatsappBtn.style.width = "60px";
+whatsappBtn.style.height = "60px";
+whatsappBtn.style.background = "#25D366";
+whatsappBtn.style.borderRadius = "50%";
+whatsappBtn.style.display = "flex";
+whatsappBtn.style.alignItems = "center";
+whatsappBtn.style.justifyContent = "center";
+whatsappBtn.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
+whatsappBtn.style.zIndex = "9999";
+whatsappBtn.style.transition = "0.3s";
+
+// Hover effect
+whatsappBtn.onmouseenter = () => {
+  whatsappBtn.style.transform = "scale(1.1)";
+};
+
+whatsappBtn.onmouseleave = () => {
+  whatsappBtn.style.transform = "scale(1)";
+};
+
+// Add to page
+document.body.appendChild(whatsappBtn);
+</script>
